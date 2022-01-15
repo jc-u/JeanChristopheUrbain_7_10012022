@@ -1,4 +1,4 @@
-import Tools from "./Tools.js";
+import Tools from "../Tools.js";
 
 class Recipe {
   constructor(data) {
