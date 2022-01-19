@@ -8,7 +8,7 @@ class List {
     this.all.push(recipeCard);
   }
 
-  displayRecipes() {
+  display() {
     let html = "";
 
     this.filtered.forEach((recipeCard) => {

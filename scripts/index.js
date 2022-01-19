@@ -12,13 +12,15 @@ recipes.forEach((recipe) => {
 list.filtered = list.all;
 
 // Scenario
-list.displayRecipes();
+list.display();
 
 let filter = new IngredientFilter(list);
+filter.build();
 filter.collect();
-filter.buildDropdown();
-filter.listenForDropdownOpening();
-filter.listenForDropdownClosing();
+filter.display().then(() => {
+  filter.listenForDropdownOpening();
+  filter.listenForDropdownClosing();
+  filter.listenForSelection();
+});
 
-//filter.listenForSelection();
 //filter.listenForInput();
