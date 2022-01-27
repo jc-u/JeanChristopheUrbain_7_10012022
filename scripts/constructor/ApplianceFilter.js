@@ -1,11 +1,11 @@
-class IngredientFilter {
+class ApplianceFilter {
   constructor(list) {
     this.recipes = list;
     this.all = [];
     this.filtered = [];
     this.displayed = [];
     this.selection = [];
-    this.type = "ingredient";
+    this.type = "appliance";
     this.inputSearch = "";
   }
 
@@ -36,8 +36,8 @@ class IngredientFilter {
     let list = [];
 
     this.recipes.filtered.forEach((recipe) => {
-      recipe.ingredients.forEach((ingredient) => {
-        let item = ingredient.ingredient.toLowerCase();
+      recipe.appliances.forEach((appliance) => {
+        let item = appliance.appliance.toLowerCase();
         if (!list.includes(item)) {
           list.push(item);
         }
@@ -51,7 +51,7 @@ class IngredientFilter {
     return new Promise((resolve, reject) => {
       let html = "";
       this.displayed.forEach((ingredient) => {
-        html += `<div class="${this.type}" data-name="${ingredient}">${ingredient}</div>`;
+        html += `<div class="${this.type}" data-name="${appliance}">${appliance}</div>`;
       });
 
       document.getElementById(`${this.type}sFilters`).innerHTML = html;
@@ -151,14 +151,14 @@ class IngredientFilter {
       return;
     }
     this.recipes.filtered = this.recipes.all.filter((recipe) => {
-      let existingIngredients = recipe.ingredients.map((item) =>
-        item.ingredient.toLowerCase()
+      let existingAppliances = recipe.appliance.map((item) =>
+        item.appliance.toLowerCase()
       );
 
       let count = 0;
 
       this.selection.forEach((ingSelect) => {
-        if (existingIngredients.includes(ingSelect.toLowerCase())) {
+        if (existingAppliances.includes(ingSelect.toLowerCase())) {
           count++;
         }
       });
@@ -172,4 +172,4 @@ class IngredientFilter {
   }
 }
 
-export default IngredientFilter;
+export default ApplianceFilter;

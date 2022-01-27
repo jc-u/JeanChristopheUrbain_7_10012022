@@ -43,7 +43,7 @@ header .searchBar > input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 30px auto;
+  margin: 90px auto;
   position: absolute;
   z-index: 1;
   top: 300px;
@@ -287,7 +287,7 @@ header .searchBar > input {
   margin-top: -4px;
 }
 
-.search__tagsLists #searchIngredient {
+.search__tagsLists #searchingredient {
   background-color: #3282f7;
 }
 
@@ -295,7 +295,6 @@ header .searchBar > input {
   background-color: #3282f7;
   border-radius: 0 0 5px 5px;
   display: none;
-  overflow-y: hidden;
   padding-left: 20px;
 }
 
@@ -308,5 +307,35 @@ header .searchBar > input {
 .search__tagsLists #ingredientsFilters .ingredient:hover {
   background-color: white;
   color: #3282f7;
+}
+
+#selections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#selections .tag {
+  background-color: #3282f7;
+  padding: 10px 40px 10px 15px;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  margin-right: 10px;
+}
+
+#selections .tag::after {
+  content: "";
+  background-image: url("../../assets/img/highlight.png");
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  margin: 0 10px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -96,14 +96,13 @@
     margin-top: -4px;
   }
 
-  #searchIngredient {
+  #searchingredient {
     background-color: #3282f7;
   }
   #ingredientsFilters {
     background-color: #3282f7;
     border-radius: 0 0 5px 5px;
     display: none;
-    overflow-y: hidden;
     padding-left: 20px;
 
     .ingredient {
@@ -114,6 +113,34 @@
         background-color: white;
         color: #3282f7;
       }
+    }
+  }
+}
+
+#selections {
+  display: flex;
+  text-align: left;
+  margin-top: 20px;
+
+  .tag {
+    background-color: #3282f7;
+    padding: 10px 40px 10px 15px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      background-image: url("../../assets/img/highlight.png");
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 9px;
+      right: 0;
+      margin: 0 10px;
+      cursor: pointer;
     }
   }
 }
