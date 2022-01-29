@@ -9,12 +9,12 @@ class ApplianceFilter {
     this.inputSearch = "";
   }
 
-  build() {
+  buildFilters() {
     document.getElementById("filters").innerHTML += ` 
     <div id="${this.type}sContainer" class="tagsListsContainer">
       <button id="${this.type}--btn">
         ${this.type}s
-        <div class="more"></div>
+        <div class="${this.type}--btn--more"></div>
       </button>
 
       <input
@@ -24,7 +24,7 @@ class ApplianceFilter {
         placeholder="Rechercher"
       />
 
-      <div class="less"></div>
+      <div class="${this.type}--btn--less"></div>
       <div
         id="${this.type}sFilters"
         class="search__tagsLists__filtersLists"
@@ -32,16 +32,19 @@ class ApplianceFilter {
     </div>`;
   }
 
+  buildSelections() {
+    document.getElementById(
+      "selections"
+    ).innerHTML += `<div id="${this.type}__selections"></div>`;
+  }
+
   collect() {
     let list = [];
-
     this.recipes.filtered.forEach((recipe) => {
-      recipe.appliances.forEach((appliance) => {
-        let item = appliance.appliance.toLowerCase();
-        if (!list.includes(item)) {
-          list.push(item);
-        }
-      });
+      let item = recipe.appliance.toLowerCase();
+      if (!list.includes(item)) {
+        list.push(item);
+      }
     });
 
     this.filtered = this.displayed = list;
@@ -50,7 +53,7 @@ class ApplianceFilter {
   display() {
     return new Promise((resolve, reject) => {
       let html = "";
-      this.displayed.forEach((ingredient) => {
+      this.displayed.forEach((appliance) => {
         html += `<div class="${this.type}" data-name="${appliance}">${appliance}</div>`;
       });
 
@@ -60,11 +63,11 @@ class ApplianceFilter {
   }
 
   displaySelection() {
-    document.getElementById("selections").innerHTML = "";
+    document.getElementById(`${this.type}__selections`).innerHTML = "";
     this.selection.forEach((tag) => {
       document.getElementById(
-        "selections"
-      ).innerHTML += `<div class="tag tag-${this.type}" data-id="${tag}" data-type="${this.type}">${tag}</div>`;
+        `${this.type}__selections`
+      ).innerHTML += `<div class="tag-${this.type}" data-id="${tag}" data-type="${this.type}">${tag}</div>`;
     });
   }
 
@@ -82,21 +85,27 @@ class ApplianceFilter {
           document.getElementById(`search${this.type}`).style.display = "block";
           document.getElementById(`search${this.type}`).style.width = "100%";
           document.getElementById(`${this.type}--btn`).style.display = "none";
-          document.querySelector(".more").style.display = "none";
-          document.querySelector(".less").style.display = "block";
+          document.querySelector(`.${this.type}--btn--more`).style.display =
+            "none";
+          document.querySelector(`.${this.type}--btn--less`).style.display =
+            "block";
         }
       });
   }
 
   listenForDropdownClosing() {
-    document.querySelector(".less").addEventListener("click", () => {
-      document.getElementById(`${this.type}sFilters`).style.display = "none";
-      document.querySelector(".more").style.display = "block";
-      document.querySelector(".less").style.display = "none";
-      document.getElementById(`${this.type}--btn`).style.display = "block";
-      document.getElementById(`search${this.type}`).style.display = "none";
-      this.inputSearch = "";
-    });
+    document
+      .querySelector(`.${this.type}--btn--less`)
+      .addEventListener("click", () => {
+        document.getElementById(`${this.type}sFilters`).style.display = "none";
+        document.querySelector(`.${this.type}--btn--more`).style.display =
+          "block";
+        document.querySelector(`.${this.type}--btn--less`).style.display =
+          "none";
+        document.getElementById(`${this.type}--btn`).style.display = "block";
+        document.getElementById(`search${this.type}`).style.display = "none";
+        this.inputSearch = "";
+      });
   }
 
   listenForInput() {
@@ -151,10 +160,7 @@ class ApplianceFilter {
       return;
     }
     this.recipes.filtered = this.recipes.all.filter((recipe) => {
-      let existingAppliances = recipe.appliance.map((item) =>
-        item.appliance.toLowerCase()
-      );
-
+      let existingAppliances = recipe.appliance.toLowerCase();
       let count = 0;
 
       this.selection.forEach((ingSelect) => {

@@ -11,13 +11,13 @@ recipes.forEach((recipe) => {
 });
 
 list.filtered = list.all;
-console.log(list.all);
 
 // Scenario
 list.display();
 
 let filter = new IngredientFilter(list);
-filter.build();
+filter.buildFilters();
+filter.buildSelections();
 filter.listenForInput();
 filter.collect();
 filter.display().then(() => {
@@ -27,7 +27,8 @@ filter.display().then(() => {
 });
 
 let appliance = new ApplianceFilter(list);
-appliance.build();
+appliance.buildFilters();
+appliance.buildSelections();
 appliance.listenForInput();
 appliance.collect();
 appliance.display().then(() => {
