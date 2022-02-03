@@ -4,6 +4,8 @@ import IngredientFilter from "./constructor/IngredientFilter.js";
 import ApplianceFilter from "./constructor/ApplianceFilter.js";
 
 const list = new List();
+const ingredient = new IngredientFilter(list);
+const appliance = new ApplianceFilter(list);
 
 recipes.forEach((recipe) => {
   const recipeCard = new Recipe(recipe);
@@ -11,28 +13,8 @@ recipes.forEach((recipe) => {
 });
 
 list.filtered = list.all;
+list.addFilter(ingredient);
+list.addFilter(appliance);
 
 // Scenario
 list.display();
-
-let filter = new IngredientFilter(list);
-filter.buildFilters();
-filter.buildSelections();
-filter.listenForInput();
-filter.collect();
-filter.display().then(() => {
-  filter.listenForDropdownOpening();
-  filter.listenForDropdownClosing();
-  filter.listenForSelection();
-});
-
-let appliance = new ApplianceFilter(list);
-appliance.buildFilters();
-appliance.buildSelections();
-appliance.listenForInput();
-appliance.collect();
-appliance.display().then(() => {
-  appliance.listenForDropdownOpening();
-  appliance.listenForDropdownClosing();
-  appliance.listenForSelection();
-});
