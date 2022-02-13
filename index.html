@@ -8,8 +8,13 @@
     <title>Les petits plats</title>
   </head>
   <body>
+    <!-- HEADER -->
+
     <header>
       <img src="./assets/img/logo.png" alt="les petits plats logo" />
+
+      <!-- INPUT -->
+
       <div class="searchBar">
         <input
           type="text"
@@ -17,9 +22,18 @@
           placeholder="Recherchez un ingrédient, appareil, ustensiles ou une recette"
         />
       </div>
+
+      <!-- TAGS -->
+
       <div id="selections"></div>
+
+      <!-- FILTERS -->
+
       <div id="filters" class="search__tagsLists"></div>
     </header>
+
+    <!-- RECIPES -->
+
     <div id="recipesContainer"></div>
     <script src="./data/recipes.js"></script>
     <script src="./scripts/index.js" type="module"></script>

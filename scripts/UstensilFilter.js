@@ -1,14 +1,23 @@
 import Filter from "./Filter.js";
-class IngredientFilter extends Filter {
+
+/**
+ * Ustensil filter constructor
+ * @param {Array | Object} data
+ * @param {Array | Object} photographer
+ * @param {string} src the source of media
+ */
+class UstensilFilter extends Filter {
   constructor(list) {
-    super(list, "ingredient");
+    super(list, "ustensil");
   }
+
+  // Collect all ustensils tags in array to lower case
 
   collect() {
     let list = [];
     this.recipes.filtered.forEach((recipe) => {
-      recipe.ingredients.forEach((ingredient) => {
-        let item = ingredient.ingredient.toLowerCase();
+      recipe.ustensils.forEach((ustensil) => {
+        let item = ustensil.toLowerCase();
         if (!list.includes(item)) {
           list.push(item);
         }
@@ -18,20 +27,22 @@ class IngredientFilter extends Filter {
     this.filtered = this.displayed = list;
   }
 
+  // Filters the recipes according to the selected ustensil tags
+
   filterRecipes(recipes) {
     let list = [];
     if (this.selection.length === 0) {
       return recipes;
     }
     list = recipes.filter((recipe) => {
-      let existingIngredients = recipe.ingredients.map((item) =>
-        item.ingredient.toLowerCase()
+      let existingUstensils = recipe.ustensils.map((item) =>
+        item.toLowerCase()
       );
-
+      console.log(existingUstensils);
       let count = 0;
 
       this.selection.forEach((ingSelect) => {
-        if (existingIngredients.includes(ingSelect.toLowerCase())) {
+        if (existingUstensils.includes(ingSelect.toLowerCase())) {
           count++;
         }
       });
@@ -47,4 +58,4 @@ class IngredientFilter extends Filter {
   }
 }
 
-export default IngredientFilter;
+export default UstensilFilter;

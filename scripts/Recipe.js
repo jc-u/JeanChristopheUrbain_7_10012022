@@ -1,5 +1,16 @@
-import Tools from "../Tools.js";
-
+import Tools from "./Tools.js";
+/**
+ * Represents a recipe.
+ * @constructor
+ * @param {number} id - the id of a recipe
+ * @param {string} name - the name of a recipe
+ * @param {string} servings - the servings of a recipe
+ * @param {Array} ingredients - the ingredients of a recipe
+ * @param {number} time - the time of a recipe
+ * @param {string} description - the description of a recipe
+ * @param {string} appliance - the appliance of a recipe
+ * @param {string} ustensils - the ustencils of a recipe
+ */
 class Recipe {
   constructor(data) {
     this.id = data.id;
@@ -11,6 +22,11 @@ class Recipe {
     this.appliance = data.appliance;
     this.ustensils = data.ustensils;
   }
+
+  /**
+   * Create recipe card
+   * @returns {string} - Return recipe card
+   */
 
   render() {
     return `
@@ -31,6 +47,11 @@ class Recipe {
     </div>
   </div>`;
   }
+
+  /**
+   * Create ingredient list of a recipe
+   * @returns {string} - Return ingredient list
+   */
 
   ingredientsList() {
     const ingredientsList = [];

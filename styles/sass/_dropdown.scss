@@ -4,7 +4,8 @@
   position: relative;
   z-index: 2;
 
-  // Ingredient
+  // INGREDIENT
+
   #ingredient--btn {
     height: 69px;
     color: white;
@@ -117,7 +118,8 @@
     }
   }
 
-  //Appliance
+  //APPLIANCE
+
   #appliance--btn {
     height: 69px;
     color: white;
@@ -229,7 +231,123 @@
       }
     }
   }
+
+  // USTENSIL
+
+  #ustensil--btn {
+    height: 69px;
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    width: 170px;
+    border: none;
+    font-weight: bold;
+    background-color: #ed6454;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .search__tagsLists__frame__input {
+    display: none;
+    height: 69px;
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    width: 170px;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+
+    &::placeholder {
+      font-size: 18px;
+      position: relative;
+      left: -11px;
+      top: 1px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 18px;
+      padding-left: 10px;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::placeholder {
+        position: relative;
+        left: -11px;
+        top: 1px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 18px;
+      }
+    }
+  }
+  #ustensilsContainer {
+    position: relative;
+
+    .ustensil--btn--more {
+      background: url("../../assets/img/more.png") no-repeat right;
+      height: 32px;
+      width: 32px;
+      position: absolute;
+      top: 37px;
+      right: 0;
+      cursor: pointer;
+    }
+    .ustensil--btn--less {
+      display: none;
+      background: url("../../assets/img/less.png") no-repeat right;
+      height: 32px;
+      width: 32px;
+      position: absolute;
+      top: 37px;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__block {
+    border-radius: 0 0 5px 5px;
+    width: 40px;
+  }
+
+  &__filtersLists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-wrap: break-word;
+    width: 667px;
+    max-height: 397px;
+    overflow: auto;
+    color: white;
+    margin: auto;
+    row-gap: 3px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -4px;
+  }
+
+  #searchustensil {
+    background-color: #ed6454;
+  }
+  #ustensilsFilters {
+    background-color: #ed6454;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    padding-left: 20px;
+
+    .ustensil {
+      font-size: 18px;
+      text-align: left;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: #ed6454;
+      }
+    }
+  }
 }
+
+// TAGS
 
 #selections {
   display: flex;
@@ -237,7 +355,8 @@
   margin-top: 20px;
 
   #ingredient__selections,
-  #appliance__selections {
+  #appliance__selections,
+  #ustensil__selections {
     display: flex;
   }
 
@@ -264,6 +383,27 @@
   }
   .tag-appliance {
     background-color: #68d9a4;
+    padding: 10px 40px 10px 15px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      background-image: url("../../assets/img/highlight.png");
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 9px;
+      right: 0;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
+  .tag-ustensil {
+    background-color: #ed6454;
     padding: 10px 40px 10px 15px;
     border-radius: 5px;
     color: white;

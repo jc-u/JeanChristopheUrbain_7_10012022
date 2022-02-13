@@ -1,8 +1,17 @@
 import Filter from "./Filter.js";
+
+/**
+ * Appliance filter constructor
+ * @param {Array | Object} data
+ * @param {Array | Object} photographer
+ * @param {string} src the source of media
+ */
 class ApplianceFilter extends Filter {
   constructor(list) {
     super(list, "appliance");
   }
+
+  // Collect all appliances tags in array to lower case
 
   collect() {
     let list = [];
@@ -15,6 +24,8 @@ class ApplianceFilter extends Filter {
 
     this.filtered = this.displayed = list;
   }
+
+  // Filters the recipes according to the selected appliances tags
 
   filterRecipes(recipes) {
     let list = [];
