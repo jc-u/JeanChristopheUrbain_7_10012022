@@ -69,14 +69,14 @@ class List {
     document.getElementById("searchBar").addEventListener("input", (e) => {
       let hasNewCharacter = !!(e.target.value.length > this.searchTerm.length);
       this.searchTerm = e.target.value.toLowerCase();
-      this.search(hasNewCharacter);
+      this.searchAlt(hasNewCharacter);
       this.display();
     });
   }
 
   // search algorithm
 
-  search(hasNewCharacter) {
+  /* search(hasNewCharacter) {
     let list = this.all;
 
     if (this.searchTerm.length === 0) {
@@ -112,9 +112,9 @@ class List {
 
       return toKeep;
     });
-  }
+  } */
 
-  /* searchAlt(hasNewCharacter) {
+  searchAlt(hasNewCharacter) {
     let list = this.all;
 
     if (this.searchTerm.length === 0) {
@@ -151,7 +151,7 @@ class List {
       }
       return toKeep;
     });
-  } */
+  }
 }
 
 export default List;
