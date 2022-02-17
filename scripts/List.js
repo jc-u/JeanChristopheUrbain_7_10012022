@@ -36,11 +36,16 @@ class List {
   display() {
     let html = "";
 
-    this.filtered.forEach((recipeCard) => {
-      html += recipeCard.render();
-    });
+    if (this.filtered.length > 0) {
+      this.filtered.forEach((recipeCard) => {
+        html += recipeCard.render();
+      });
 
-    document.getElementById("recipesContainer").innerHTML = html;
+      document.getElementById("recipesContainer").innerHTML = html;
+    } else {
+      document.getElementById("recipesContainer").innerHTML =
+        "Aucune recette ne correspond";
+    }
   }
 
   // Filters the recipes according to the selected tags
@@ -69,8 +74,16 @@ class List {
     document.getElementById("searchBar").addEventListener("input", (e) => {
       let hasNewCharacter = !!(e.target.value.length > this.searchTerm.length);
       this.searchTerm = e.target.value.toLowerCase();
+      console.time("Search Test 1");
       this.search(hasNewCharacter);
+      console.timeEnd("Search Test 1");
+      console.time("Search Test 2");
+      this.searchAlt(hasNewCharacter);
+      console.timeEnd("Search Test 2");
       this.display();
+      this.filters.forEach((filter) => {
+        filter.update();
+      });
     });
   }
 
@@ -114,7 +127,9 @@ class List {
     });
   }
 
-  /* searchAlt(hasNewCharacter) {
+  // search algorithm 2
+
+  searchAlt(hasNewCharacter) {
     let list = this.all;
 
     if (this.searchTerm.length === 0) {
@@ -141,17 +156,16 @@ class List {
           return true;
         }
       }
-      return toKeep;
 
       for (let j = 0; j < recipe.ingredients.length; j++) {
-        let ingredient = recipe.ingredient.ingredient[j];
+        let ingredient = recipe.ingredients[j].ingredient;
         if (ingredient.toLowerCase().includes(this.searchTerm)) {
           return true;
         }
       }
       return toKeep;
     });
-  } */
+  }
 }
 
 export default List;

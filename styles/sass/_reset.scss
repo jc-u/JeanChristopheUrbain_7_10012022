@@ -5,7 +5,13 @@
 }
 
 body {
-  width: 1240px;
+  width: 95%;
   margin: 0 auto;
   font-family: "Lato", sans-serif;
+}
+
+@media (min-width: 1280px) {
+  body {
+    width: 1240px;
+  }
 }
