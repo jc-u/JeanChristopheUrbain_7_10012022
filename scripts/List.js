@@ -44,7 +44,7 @@ class List {
       document.getElementById("recipesContainer").innerHTML = html;
     } else {
       document.getElementById("recipesContainer").innerHTML =
-        "Aucune recette ne correspond";
+        "Aucune recette ne correspond à votre recherche";
     }
   }
 
