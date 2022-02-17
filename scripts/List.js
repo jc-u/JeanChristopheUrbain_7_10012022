@@ -36,11 +36,16 @@ class List {
   display() {
     let html = "";
 
-    this.filtered.forEach((recipeCard) => {
-      html += recipeCard.render();
-    });
+    if (this.filtered.length > 0) {
+      this.filtered.forEach((recipeCard) => {
+        html += recipeCard.render();
+      });
 
-    document.getElementById("recipesContainer").innerHTML = html;
+      document.getElementById("recipesContainer").innerHTML = html;
+    } else {
+      document.getElementById("recipesContainer").innerHTML =
+        "Aucune recette ne correspond à votre recherche";
+    }
   }
 
   // Filters the recipes according to the selected tags
@@ -74,46 +79,6 @@ class List {
     });
   }
 
-  // search algorithm
-
-  /* search(hasNewCharacter) {
-    let list = this.all;
-
-    if (this.searchTerm.length === 0) {
-      this.filtered = this.all;
-    }
-
-    if (hasNewCharacter) {
-      list = this.filtered;
-    }
-
-    this.filtered = list.filter((recipe) => {
-      let toKeep = false;
-
-      if (
-        recipe.name.toLowerCase().includes(this.searchTerm) ||
-        recipe.description.includes(this.searchTerm) ||
-        recipe.appliance.toLowerCase().includes(this.searchTerm)
-      ) {
-        toKeep = true;
-      }
-
-      recipe.ustensils.forEach((ustensil) => {
-        if (ustensil.toLowerCase().includes(this.searchTerm)) {
-          toKeep = true;
-        }
-
-        recipe.ingredients.forEach((ingredient) => {
-          if (ingredient.ingredient.toLowerCase().includes(this.searchTerm)) {
-            toKeep = true;
-          }
-        });
-      });
-
-      return toKeep;
-    });
-  } */
-
   searchAlt(hasNewCharacter) {
     let list = this.all;
 
@@ -141,10 +106,9 @@ class List {
           return true;
         }
       }
-      return toKeep;
 
       for (let j = 0; j < recipe.ingredients.length; j++) {
-        let ingredient = recipe.ingredient.ingredient[j];
+        let ingredient = recipe.ingredients[j].ingredient;
         if (ingredient.toLowerCase().includes(this.searchTerm)) {
           return true;
         }
