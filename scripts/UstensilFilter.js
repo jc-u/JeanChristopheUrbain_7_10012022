@@ -38,7 +38,6 @@ class UstensilFilter extends Filter {
       let existingUstensils = recipe.ustensils.map((item) =>
         item.toLowerCase()
       );
-      console.log(existingUstensils);
       let count = 0;
 
       this.selection.forEach((ingSelect) => {
