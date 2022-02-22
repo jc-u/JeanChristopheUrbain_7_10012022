@@ -36,7 +36,7 @@ header .searchBar input {
   border-radius: 5px;
   padding-left: 25px;
   padding-right: 50px;
-  background: #e7e7e7 url("../../assets/img/search.png") no-repeat center right 10px;
+  background: #e7e7e7 url("../assets/img/search.png") no-repeat center right 10px;
   text-overflow: ellipsis;
 }
 
@@ -126,7 +126,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 #recipesContainer .recipesList__card .recipesList__card__title .recipesList__card__title__time::before {
   content: "";
   display: block;
-  background: url("../../assets/img/watch.png") no-repeat;
+  background: url("../assets/img/watch.png") no-repeat;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -181,7 +181,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
     border: none;
     border-radius: 5px;
     padding-left: 25px;
-    background: #e7e7e7 url("../../assets/img/search.png") no-repeat center right 10px;
+    background: #e7e7e7 url("../assets/img/search.png") no-repeat center right 10px;
   }
   header #selections {
     width: 100%;
@@ -265,7 +265,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   #recipesContainer .recipesList__card .recipesList__card__title .recipesList__card__title__time::before {
     content: "";
     display: block;
-    background: url("../../assets/img/watch.png") no-repeat;
+    background: url("../assets/img/watch.png") no-repeat;
     width: 24px;
     height: 24px;
     position: absolute;
@@ -422,7 +422,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 }
 
 .search__tagsLists #ingredientsContainer .ingredient--btn--more {
-  background: url("../../assets/img/more.png") no-repeat right;
+  background: url("../assets/img/more.png") no-repeat right;
   height: 32px;
   width: 32px;
   position: absolute;
@@ -433,7 +433,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 
 .search__tagsLists #ingredientsContainer .ingredient--btn--less {
   display: none;
-  background: url("../../assets/img/less.png") no-repeat right;
+  background: url("../assets/img/less.png") no-repeat right;
   height: 32px;
   width: 32px;
   position: absolute;
@@ -595,7 +595,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 }
 
 .search__tagsLists #appliancesContainer .appliance--btn--more {
-  background: url("../../assets/img/more.png") no-repeat right;
+  background: url("../assets/img/more.png") no-repeat right;
   height: 32px;
   width: 32px;
   position: absolute;
@@ -606,7 +606,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 
 .search__tagsLists #appliancesContainer .appliance--btn--less {
   display: none;
-  background: url("../../assets/img/less.png") no-repeat right;
+  background: url("../assets/img/less.png") no-repeat right;
   height: 32px;
   width: 32px;
   position: absolute;
@@ -768,7 +768,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 }
 
 .search__tagsLists #ustensilsContainer .ustensil--btn--more {
-  background: url("../../assets/img/more.png") no-repeat right;
+  background: url("../assets/img/more.png") no-repeat right;
   height: 32px;
   width: 32px;
   position: absolute;
@@ -779,7 +779,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 
 .search__tagsLists #ustensilsContainer .ustensil--btn--less {
   display: none;
-  background: url("../../assets/img/less.png") no-repeat right;
+  background: url("../assets/img/less.png") no-repeat right;
   height: 32px;
   width: 32px;
   position: absolute;
@@ -858,7 +858,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 
 #selections .tag-ingredient::after {
   content: "";
-  background-image: url("../../assets/img/highlight.png");
+  background-image: url("../assets/img/highlight.png");
   display: block;
   width: 24px;
   height: 24px;
@@ -880,7 +880,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 
 #selections .tag-appliance::after {
   content: "";
-  background-image: url("../../assets/img/highlight.png");
+  background-image: url("../assets/img/highlight.png");
   display: block;
   width: 24px;
   height: 24px;
@@ -902,7 +902,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
 
 #selections .tag-ustensil::after {
   content: "";
-  background-image: url("../../assets/img/highlight.png");
+  background-image: url("../assets/img/highlight.png");
   display: block;
   width: 24px;
   height: 24px;
