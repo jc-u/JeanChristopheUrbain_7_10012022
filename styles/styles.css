@@ -1020,7 +1020,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
     position: relative;
   }
   .search__tagsLists #ingredientsContainer .ingredient--btn--more {
-    background: url("../../assets/img/more.png") no-repeat right;
+    background: url("../assets/img/more.png") no-repeat right;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -1030,7 +1030,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   }
   .search__tagsLists #ingredientsContainer .ingredient--btn--less {
     display: none;
-    background: url("../../assets/img/less.png") no-repeat right;
+    background: url("../assets/img/less.png") no-repeat right;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -1173,7 +1173,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
     position: relative;
   }
   .search__tagsLists #appliancesContainer .appliance--btn--more {
-    background: url("../../assets/img/more.png") no-repeat right;
+    background: url("../assets/img/more.png") no-repeat right;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -1183,7 +1183,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   }
   .search__tagsLists #appliancesContainer .appliance--btn--less {
     display: none;
-    background: url("../../assets/img/less.png") no-repeat right;
+    background: url("../assets/img/less.png") no-repeat right;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -1326,7 +1326,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
     position: relative;
   }
   .search__tagsLists #ustensilsContainer .ustensil--btn--more {
-    background: url("../../assets/img/more.png") no-repeat right;
+    background: url("../assets/img/more.png") no-repeat right;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -1336,7 +1336,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   }
   .search__tagsLists #ustensilsContainer .ustensil--btn--less {
     display: none;
-    background: url("../../assets/img/less.png") no-repeat right;
+    background: url("../assets/img/less.png") no-repeat right;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -1405,7 +1405,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   }
   #selections .tag-ingredient::after {
     content: "";
-    background-image: url("../../assets/img/highlight.png");
+    background-image: url("../assets/img/highlight.png");
     display: block;
     width: 24px;
     height: 24px;
@@ -1425,7 +1425,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   }
   #selections .tag-appliance::after {
     content: "";
-    background-image: url("../../assets/img/highlight.png");
+    background-image: url("../assets/img/highlight.png");
     display: block;
     width: 24px;
     height: 24px;
@@ -1445,7 +1445,7 @@ header #filters .tagsListsContainer .search__tagsLists__filtersLists {
   }
   #selections .tag-ustensil::after {
     content: "";
-    background-image: url("../../assets/img/highlight.png");
+    background-image: url("../assets/img/highlight.png");
     display: block;
     width: 24px;
     height: 24px;

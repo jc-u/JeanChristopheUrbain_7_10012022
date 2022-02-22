@@ -487,7 +487,7 @@
       position: relative;
 
       .ingredient--btn--more {
-        background: url("../../assets/img/more.png") no-repeat right;
+        background: url("../assets/img/more.png") no-repeat right;
         height: 32px;
         width: 32px;
         position: absolute;
@@ -497,7 +497,7 @@
       }
       .ingredient--btn--less {
         display: none;
-        background: url("../../assets/img/less.png") no-repeat right;
+        background: url("../assets/img/less.png") no-repeat right;
         height: 32px;
         width: 32px;
         position: absolute;
@@ -601,7 +601,7 @@
       position: relative;
 
       .appliance--btn--more {
-        background: url("../../assets/img/more.png") no-repeat right;
+        background: url("../assets/img/more.png") no-repeat right;
         height: 32px;
         width: 32px;
         position: absolute;
@@ -611,7 +611,7 @@
       }
       .appliance--btn--less {
         display: none;
-        background: url("../../assets/img/less.png") no-repeat right;
+        background: url("../assets/img/less.png") no-repeat right;
         height: 32px;
         width: 32px;
         position: absolute;
@@ -715,7 +715,7 @@
       position: relative;
 
       .ustensil--btn--more {
-        background: url("../../assets/img/more.png") no-repeat right;
+        background: url("../assets/img/more.png") no-repeat right;
         height: 32px;
         width: 32px;
         position: absolute;
@@ -725,7 +725,7 @@
       }
       .ustensil--btn--less {
         display: none;
-        background: url("../../assets/img/less.png") no-repeat right;
+        background: url("../assets/img/less.png") no-repeat right;
         height: 32px;
         width: 32px;
         position: absolute;
@@ -798,7 +798,7 @@
 
       &::after {
         content: "";
-        background-image: url("../../assets/img/highlight.png");
+        background-image: url("../assets/img/highlight.png");
         display: block;
         width: 24px;
         height: 24px;
@@ -819,7 +819,7 @@
 
       &::after {
         content: "";
-        background-image: url("../../assets/img/highlight.png");
+        background-image: url("../assets/img/highlight.png");
         display: block;
         width: 24px;
         height: 24px;
@@ -840,7 +840,7 @@
 
       &::after {
         content: "";
-        background-image: url("../../assets/img/highlight.png");
+        background-image: url("../assets/img/highlight.png");
         display: block;
         width: 24px;
         height: 24px;
