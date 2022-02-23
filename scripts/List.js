@@ -91,7 +91,6 @@ class List {
     }
 
     this.filtered = list.filter((recipe) => {
-      let toKeep = false;
       if (
         recipe.name.toLowerCase().includes(this.searchTerm) ||
         recipe.description.includes(this.searchTerm) ||
@@ -113,7 +112,7 @@ class List {
           return true;
         }
       }
-      return toKeep;
+      return false;
     });
   }
 }
